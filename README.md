@@ -8,7 +8,7 @@ My C# journey notes
 
 `MAhApps.Metro 1.6.5` and `Prism.Unity v7.2.0.1233-pre` 
 
-```
+```C#
 using System;
 using System.Linq;
 using System.Windows;
@@ -82,20 +82,22 @@ public static class MetroDialogSettingsFactory
 
 ### ViewModel
 
-```
+```C#
 class MyDialogViewModel : DialogViewModel {
   private void MyMethodtoEndDialog() { //submit or close does not matter
       this.Close(new DialogParameters(/*my parameters*/))
   }
 }
-
 ```
 
 ### Initialazing dialog
 
-```
+```C#
 DialogParameters result = await container.Resolve<ServerConnectionDialog>().ShowDialogAsync();
-
+if(result != null)
+{
+    //yeeey
+}
 ```
 yes it is one single line
 
