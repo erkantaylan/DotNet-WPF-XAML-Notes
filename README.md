@@ -103,4 +103,4 @@ yes it is one single line
 
 you can just say `Close()` at viewmodel, it will return `null` as *result* and check if result is `null` 
 
-at dialogs i check only data is whether valid or not, i don't do any work with them, just return data to put all same logic in one place...
+at dialogs i check only data is whether valid or not, i don't do any work with them, just return data to put all same logic in one place
