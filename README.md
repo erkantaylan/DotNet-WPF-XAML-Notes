@@ -96,7 +96,7 @@ class MyDialogViewModel : DialogViewModel {
 DialogParameters result = await container.Resolve<ServerConnectionDialog>().ShowDialogAsync();
 if(result != null)
 {
-    //yeeey...
+    //yeeey
 }
 ```
 yes it is one single line
