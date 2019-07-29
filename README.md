@@ -1,4 +1,4 @@
-# CSharp-Notebook
+# C#/WPF/XAML-Notebook
 My C# journey notes
 
 # XAML Enum with Description binding
