@@ -146,3 +146,21 @@ at dialogs i check only data is whether valid or not, i don't do any work with t
 ```
 
 
+# Thread with timeout
+
+TimedThread.cs
+
+usage:
+
+```C#
+var timedThread = new TimedThread<string>(myAction, 5000);
+(ThreadStatus status, string html) = await timedThread.InvokeAsync();
+
+if (status == ThreadStatus.DONE) {
+    //thread worked properly
+}
+else {
+    //thread canceled
+}
+
+```
