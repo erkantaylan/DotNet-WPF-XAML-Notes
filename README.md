@@ -153,8 +153,23 @@ TimedThread.cs
 usage:
 
 ```C#
-var timedThread = new TimedThread<string>(myAction, 5000);
-(ThreadStatus status, string html) = await timedThread.InvokeAsync();
+void MyLongRunningAction()
+{
+    Console.WriteLine("Before Sleep...");
+    Thread.Sleep(1000);
+    Console.WriteLine("After 1 Second Sleep...");
+    Thread.Sleep(1000);
+    Console.WriteLine("After 2 Second Sleep...");
+    Thread.Sleep(1000);
+    Console.WriteLine("After 3 Second Sleep...");
+    Thread.Sleep(1000);
+    Console.WriteLine("After 4 Second Sleep...");
+    Thread.Sleep(1000);
+    Console.WriteLine("After 5 Second Sleep...");
+}
+
+var timedThread = new TimedThread(myAction, 5000);
+await timedThread.InvokeAsync();
 
 if (status == ThreadStatus.DONE) {
     //thread worked properly
