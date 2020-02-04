@@ -13,8 +13,11 @@ public static TimeSpan Average(this IEnumerable<TimeSpan> timeSpans)
 
 vs
 
+
+[NotEmptyCollection.cs](NotEmptyCollection<T>.cs)
+
 ```C#
-//https://blog.ploeh.dk/2017/12/11/semigroups-accumulate/
+
 public static TimeSpan Average(this NotEmptyCollection<TimeSpan> timeSpans)
 {
     var sum = timeSpans.Aggregate((x, y) => x + y);
