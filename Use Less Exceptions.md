@@ -1,5 +1,7 @@
 Source ```https://blog.ploeh.dk/2020/02/03/non-exceptional-averages/```
 
+# BAD
+
 ```C#
 public static TimeSpan Average(this IEnumerable<TimeSpan> timeSpans)
 {
@@ -11,8 +13,8 @@ public static TimeSpan Average(this IEnumerable<TimeSpan> timeSpans)
 
 ```
 
-vs
 
+# GOOD
 
 [NotEmptyCollection.cs](NotEmptyCollection<T>.cs)
 
@@ -26,6 +28,6 @@ public static TimeSpan Average(this NotEmptyCollection<TimeSpan> timeSpans)
 
 ```
 
-Other usefull sources
+### Other usefull sources
 
 - [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
