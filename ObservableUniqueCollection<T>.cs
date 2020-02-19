@@ -1,3 +1,4 @@
+//https://stackoverflow.com/a/52192794/3767991
 public class ObservableUniqueCollection<T> : ObservableCollection<T>
 {
     private readonly HashSet<T> hashSet;
