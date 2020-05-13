@@ -39,7 +39,7 @@ public class SelectableDataGridBehaviour : Behavior<DataGrid>
     }
 }
 
-    public interface ISelectable
-    {
-        bool IsSelected { get; set; }
-    }
+public interface ISelectable
+{
+    bool IsSelected { get; set; }
+}
